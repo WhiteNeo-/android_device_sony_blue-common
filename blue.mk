@@ -47,7 +47,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.qcom:recovery/root/fstab.qcom \
     $(COMMON_PATH)/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
     $(COMMON_PATH)/rootdir/system/etc/init.sony.bt.sh:system/etc/init.sony.bt.sh \
-    $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
+    $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    $(COMMON_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Additional sbin stuff
 PRODUCT_COPY_FILES += \
@@ -91,6 +92,10 @@ PRODUCT_COPY_FILES += \
 # Script for fixing perms on internal sdcard during update
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/tools/fix_storage_permissions.sh:install/bin/fix_storage_permissions.sh
+
+# Post recovery script
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
 # Sensors
 PRODUCT_COPY_FILES += \
