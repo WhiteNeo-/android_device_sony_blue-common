@@ -25,6 +25,7 @@
              android:storageDescription="@string/storage_internal"
              android:primary="true"
              android:removable="false" />
+
     <!-- external sdcard -->
     <storage android:mountPoint="/storage/sdcard1"
              android:storageDescription="@string/storage_sd_card"
