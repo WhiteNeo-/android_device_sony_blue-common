@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+TARGET_PROVIDES_ADRENO_DRIVER := true
 # inherit from msm8960-common
 $(call inherit-product, device/sony/msm8960-common/msm8960.mk)
 
@@ -74,6 +75,9 @@ PRODUCT_COPY_FILES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.media.use-awesome=true
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -140,6 +144,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    alsa.msm8960 \
     audio.primary.msm8960 \
     audio.a2dp.default \
     audio.usb.default \
@@ -176,6 +181,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    e2fsck
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
