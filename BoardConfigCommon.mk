@@ -90,8 +90,8 @@ SOMC_CFG_SENSORS_PROXIMITY_APDS9702 := yes
 SOMC_CFG_SENSORS_ACCEL_BMA250NA_INPUT := yes
 SOMC_CFG_SENSORS_COMPASS_AK8972 := yes
 
-# Include common SE policies
-include device/qcom/sepolicy/sepolicy.mk
+# Fix Adreno's INVAL
+BOARD_USES_LEGACY_MMAP := true
 
 # TWRP flags
 DEVICE_RESOLUTION := 720x1280
