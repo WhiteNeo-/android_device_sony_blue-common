@@ -74,8 +74,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/blue-common/custombootimg.mk
 TARGET_RELEASETOOLS_EXTENSIONS := device/sony/blue-common
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-
-TARGET_RECOVERY_FSTAB := device/sony/blue-common/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB = device/sony/blue-common/rootdir/twrp.fstab
 
 # Audio
 BOARD_USES_LEGACY_ALSA_AUDIO := true
@@ -113,6 +112,9 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight_1/brightness"
 TW_SECONDARY_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight_2/brightness"
+
+# Include common SE policies
+include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     device/sony/blue-common/sepolicy
