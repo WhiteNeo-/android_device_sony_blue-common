@@ -26,10 +26,10 @@ busybox mknod -m 666 /dev/null c 1 3
 busybox mount -t proc proc /proc
 busybox mount -t sysfs sysfs /sys
 
-# trigger amber LED
-busybox echo 255 > ${BOOTREC_LED_RED}
-busybox echo 0 > ${BOOTREC_LED_GREEN}
-busybox echo 255 > ${BOOTREC_LED_BLUE}
+# trigger dark cyan LED
+busybox echo 10 > ${BOOTREC_LED_RED}
+busybox echo 45 > ${BOOTREC_LED_GREEN}
+busybox echo 60 > ${BOOTREC_LED_BLUE}
 
 # keycheck
 busybox cat ${BOOTREC_EVENT} > /dev/keycheck&
@@ -41,10 +41,10 @@ load_image=/sbin/ramdisk.cpio
 # boot decision
 if [ -s /dev/keycheck ] || busybox grep -q warmboot=0x77665502 /proc/cmdline ; then
 	busybox echo 'RECOVERY BOOT' >>boot.txt
-	# orange led for recoveryboot
-	busybox echo 255 > ${BOOTREC_LED_RED}
-	busybox echo 100 > ${BOOTREC_LED_GREEN}
-	busybox echo 0 > ${BOOTREC_LED_BLUE}
+	# bright cyan led for recoveryboot
+	busybox echo 40 > ${BOOTREC_LED_RED}
+	busybox echo 180 > ${BOOTREC_LED_GREEN}
+	busybox echo 240 > ${BOOTREC_LED_BLUE}
 	# recovery ramdisk
 	load_image=/sbin/ramdisk-recovery.cpio
 else
