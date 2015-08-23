@@ -114,6 +114,7 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight_1/brightness"
 TW_SECONDARY_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight_2/brightness"
+TW_CUSTOM_THEME := device/sony/blue-common/recovery/twrp/theme/materialised/play
 
 # Include common SE policies
 include device/qcom/sepolicy/sepolicy.mk
