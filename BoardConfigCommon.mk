@@ -18,7 +18,7 @@ include device/sony/msm8960-common/BoardConfigCommon.mk
 TARGET_SPECIFIC_HEADER_PATH += device/sony/blue-common/include
 
 # Kernel properties
-TARGET_KERNEL_SOURCE := kernel/sony/msm8960
+TARGET_KERNEL_SOURCE := kernel/sony/msm8x60
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
