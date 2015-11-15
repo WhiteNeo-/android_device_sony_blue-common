@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
     $(COMMON_PATH)/rootdir/init.qcom.sh:root/init.qcom.sh \
     $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
+    $(COMMON_PATH)/rootdir/init.qcom.power.rc:root/init.qcom.power.rc \
     $(COMMON_PATH)/rootdir/init.sony.rc:root/init.sony.rc \
     $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
     $(COMMON_PATH)/rootdir/fstab.qcom:recovery/root/fstab.qcom \
