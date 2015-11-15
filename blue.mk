@@ -235,9 +235,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072
 
-# Enable Low RAM Device API
+# Low RAM Optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.low_ram=true
+    ro.config.low_ram=true \
+    persist.sys.force_highendgfx=true
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/blue-common/blue-common-vendor.mk)
